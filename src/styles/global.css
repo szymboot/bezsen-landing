@@ -1,3 +1,162 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    @media (max-width: 768px) {
+        overflow-y: auto;
+    }
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f21;
+
+    @media (max-width: 768px) {
+        min-height: 880px;
+        height: 100%;
+    }
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 64px;
+
+    @media (max-width: 768px) {
+        height: 100%;
+        position: relative;
+        padding-top: 363px;
+        justify-content: flex-start;
+    }
+
+    .character {
+        position: fixed;
+        width: 69.42%;
+        height: 174.54%;
+        object-fit: contain;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        @media (max-width: 768px) {
+            width: 246.52%;
+        }
+    }
+
+    .box1 {
+        position: fixed;
+        top: 200px;
+        left: calc(12.5% - 240px + 200px);
+        transform: translate(-50%, -50%);
+        width: 104.17%;
+        aspect-ratio: 1;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+            position: absolute;
+            top: 300px;
+            left: 35px;
+            width: 216.67%;
+        }
+    }
+
+    .box2 {
+        position: fixed;
+        right: 60px;
+        bottom: 450px;
+        transform: translate(50%, 50%);
+        width: 104.17%;
+        aspect-ratio: 1;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+            position: absolute;
+            top: 200px;
+            right: 35px;
+            transform: translate(50%, -50%);
+            bottom: initial;
+            width: 188.05%;
+        }
+    }
+
+    .box3 {
+        position: fixed;
+        left: calc(25% - 480px + 310px);
+        bottom: 200px;
+        transform: translate(-50%, 50%);
+        width: 104.17%;
+        aspect-ratio: 1;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+            position: absolute;
+            width: 818px;
+            left: calc(-25% + 100.5px + 140px);
+            bottom: 50px;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    .logo {
+        width: 56.14%;
+
+        @media (max-width: 768px) {
+            width: 77.11%;
+        }
+    }
+
+    .lightning {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: 1;
+        mix-blend-mode: screen;
+        opacity: 0.75;
+    }
+
+    .button {
+        margin-top: 79px;
+        padding: 14px 105px;
+        background-color: #db1818;
+        border-radius: 16px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #ffffff;
+        font-family: Jost, Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        z-index: 2;
+        transition: transform 0.2s ease-in-out;
+
+        @media (max-width: 768px) {
+            padding: 7px 52.5px;
+            font-size: 20px;
+            border-radius: 8px;
+            margin-top: 32px;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
