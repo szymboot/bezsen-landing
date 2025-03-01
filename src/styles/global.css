@@ -101,11 +101,15 @@ body {
     .box3 {
         position: fixed;
         left: calc(25% - 480px + 310px);
-        bottom: 200px;
-        transform: translate(-50%, 50%);
+        bottom: -1308px;
+        transform: translate(-50%, 0);
         width: 104.17%;
         aspect-ratio: 1;
         z-index: 1;
+
+        @media (max-height: 1440px) and (min-width: 769px) {
+            top: -100px;
+        }
 
         @media (max-width: 768px) {
             position: absolute;
