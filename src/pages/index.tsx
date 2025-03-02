@@ -11,9 +11,15 @@ const IndexPage: React.FC<PageProps> = () => {
     return (
         <main className="main">
             <img className="character" src={character} alt="" />
-            <img className="box1" src={box1} alt="" />
-            <img className="box2" src={box2} alt="" />
-            <img className="box3" src={box3} alt="" />
+            <div className="box1">
+                <img src={box1} alt="" />
+            </div>
+            <div className="box2">
+                <img src={box2} alt="" />
+            </div>
+            <div className="box3">
+                <img src={box3} alt="" />
+            </div>
             <img className="lightning" src={lightning} alt="" />
             <img className="logo" src={logo} alt="" />
 

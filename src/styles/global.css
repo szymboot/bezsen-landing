@@ -6,20 +6,27 @@
 
 html,
 body {
-    overflow-y: hidden;
     overflow-x: hidden;
+    overflow-y: hidden;
+
+    @media (max-height: 820px) {
+        overflow-y: auto;
+    }
 
     @media (max-width: 768px) {
-        overflow-y: initial;
+        overflow-y: auto;
     }
 }
 
 body {
+    position: relative;
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
     background-color: #1f1f21;
+    min-height: 820px;
+    overflow: hidden;
 
     @media (max-width: 768px) {
         min-height: 900px;
@@ -30,6 +37,11 @@ body {
 #___gatsby,
 #gatsby-focus-wrapper {
     height: 100vh;
+    min-height: 820px;
+
+    @media (max-width: 768px) {
+        min-height: 900px;
+    }
 }
 
 .main {
@@ -37,13 +49,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 64px;
+    height: 100%;
+    padding-top: 7.55%;
 
     @media (max-width: 768px) {
-        height: 100%;
-        position: relative;
-        padding-top: 363px;
-        justify-content: flex-start;
+        padding-top: 130px;
+        justify-content: center;
     }
 
     .character {
@@ -56,67 +67,80 @@ body {
         transform: translate(-50%, -50%);
 
         @media (max-width: 768px) {
-            position: absolute;
             width: 246.52%;
-            top: calc(50% - 100px);
+            top: 65%;
         }
     }
 
     .box1 {
-        position: fixed;
-        top: 200px;
-        left: calc(12.5% - 240px + 200px);
-        transform: translate(-50%, -50%);
-        width: 104.17%;
-        aspect-ratio: 1;
+        position: absolute;
+        top: -128px;
+        left: -9.11%;
+        width: 37.11%;
+        height: 65.97%;
         z-index: 1;
 
         @media (max-width: 768px) {
             position: absolute;
-            top: 300px;
-            left: 35px;
-            width: 216.67%;
+            top: 18.88%;
+            left: -30.86%;
+            width: 74.62%;
+            height: 34.32%;
+        }
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
         }
     }
 
     .box2 {
-        position: fixed;
-        right: 60px;
-        bottom: 450px;
-        transform: translate(50%, 50%);
-        width: 104.17%;
-        aspect-ratio: 1;
+        position: absolute;
+        right: -16.86%;
+        bottom: 10px;
+        width: 40.63%;
+        height: 72.23%;
         z-index: 1;
 
         @media (max-width: 768px) {
-            position: absolute;
-            top: 200px;
-            right: 35px;
-            transform: translate(50%, -50%);
+            top: 4.8%;
+            right: -30%;
             bottom: initial;
-            width: 188.05%;
+            width: 74.62%;
+            height: 34.32%;
+        }
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
         }
     }
 
     .box3 {
-        position: fixed;
-        left: calc(25% - 480px + 310px);
-        bottom: -1308px;
-        transform: translate(-50%, 0);
-        width: 104.17%;
-        aspect-ratio: 1;
+        position: absolute;
+        left: -0.8%;
+        bottom: -128px;
+        width: 32.29%;
+        height: 57.4%;
         z-index: 1;
-
-        @media (max-height: 1440px) and (min-width: 769px) {
-            top: -100px;
-        }
+        max-width: 840px;
 
         @media (max-width: 768px) {
-            position: absolute;
-            width: 818px;
-            left: calc(-25% + 100.5px + 140px);
-            bottom: -60px;
-            transform: translate(-50%, 0);
+            width: 62.19%;
+            height: 28.6%;
+            left: -0.8%;
+            bottom: -1%;
+        }
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
         }
     }
 
